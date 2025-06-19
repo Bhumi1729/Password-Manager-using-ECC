@@ -33,7 +33,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Update this with your backend API URL
-const API_URL = "http://localhost:4000"; // Adjust this port to match your backend PORT
+const API_URL = "https://password-manager-using-ecc.onrender.com"; // Adjust this port to match your backend PORT
 
 export default function SignupPage() {
     const [showPassword, setShowPassword] = useState(false);

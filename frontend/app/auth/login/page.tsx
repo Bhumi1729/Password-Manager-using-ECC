@@ -44,7 +44,7 @@ export default function LoginPage() {
       
       // Now you can send this token/user info to your backend
       try {
-        const response = await fetch('http://localhost:4000/google-auth', {
+        const response = await fetch('https://password-manager-using-ecc.onrender.com/google-auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -95,8 +95,8 @@ export default function LoginPage() {
     setSuccessMessage(null);
     
     try {
-      console.log('Sending request to:', 'http://localhost:4000/login');
-      const response = await fetch('http://localhost:4000/login', {
+      console.log('Sending request to:', 'https://password-manager-using-ecc.onrender.com/login');
+      const response = await fetch('https://password-manager-using-ecc.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

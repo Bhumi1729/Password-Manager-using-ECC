@@ -59,7 +59,7 @@ const Dashboard: React.FC = () => {
           return;
         }
         
-        const response = await fetch('http://localhost:4000/api/getAllPasswords', {
+        const response = await fetch('https://password-manager-using-ecc.onrender.com/api/getAllPasswords', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`
@@ -104,7 +104,7 @@ const Dashboard: React.FC = () => {
       }
       
       // Add this endpoint to your backend - it should return the decrypted password for a specific ID
-      const response = await fetch(`http://localhost:4000/api/getPassword/${passwordId}`, {
+      const response = await fetch(`https://password-manager-using-ecc.onrender.com/api/getPassword/${passwordId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -263,7 +263,7 @@ const Dashboard: React.FC = () => {
         return;
       }
       
-      const response = await fetch('http://localhost:4000/api/addPassword', {
+      const response = await fetch('https://password-manager-using-ecc.onrender.com/api/addPassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -332,7 +332,7 @@ const Dashboard: React.FC = () => {
         return;
       }
       
-      const response = await fetch(`http://localhost:4000/api/updatePassword/${currentPassword._id}`, {
+      const response = await fetch(`https://password-manager-using-ecc.onrender.com/api/updatePassword/${currentPassword._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -397,7 +397,7 @@ const Dashboard: React.FC = () => {
       }
   
       // Call the API to delete the password
-      const response = await fetch(`http://localhost:4000/api/deletePassword/${id}`, {
+      const response = await fetch(`https://password-manager-using-ecc.onrender.com/api/deletePassword/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
