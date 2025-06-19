@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URL).then(()=>{
 })
 // Allow requests from both localhost:3000 and localhost:3001
 const allowedOrigins = [
-  'https://ecc-based-password-manager.vercel.app'
+  'https://password-manager-using-ecc.vercel.app/'
 ];
 
 app.use(cors({
