@@ -21,12 +21,17 @@ mongoose.connect(process.env.MONGODB_URL).then(()=>{
 })
 // Allow requests from both localhost:3000 and localhost:3001
 const allowedOrigins = [
-  'https://password-manager-using-ecc.vercel.app/'
+  'https://password-manager-using-ecc.vercel.app',
+  'https://password-manager-using-ecc.onrender.com',
+  'http://localhost:3000',
+  'http://localhost:4000',
+  'http://127.0.0.1:3000',
+  'http://127.0.0.1:4000'
 ];
 
 app.use(cors({
   origin: function(origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.some(o => origin === o || origin === o + '/')) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
